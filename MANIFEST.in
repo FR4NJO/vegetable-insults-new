@@ -1,0 +1,3 @@
+# solute.packaging needs these files in the sdist package
+include debian/changelog
+include debian/control

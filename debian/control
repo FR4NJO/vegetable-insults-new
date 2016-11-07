@@ -1,0 +1,26 @@
+Source: solute-vegetable-insults-new
+Section: python
+Priority: optional
+Maintainer: Vujevic <fv@solute.de>
+Build-Depends:
+    python (>= 2.6),
+    python-support (>= 1),
+    debhelper(>= 8),
+    build-essential,
+    python-setuptools-git,
+    solute-python-solute,
+Standards-Version: 3.9.6
+Homepage: <insert the upstream URL, if relevant>
+#Vcs-Git: git://anonscm.debian.org/collab-maint/solute-vegetable-insults-new.git
+#Vcs-Browser: https://anonscm.debian.org/cgit/collab-maint/solute-vegetable-insults-new.git
+
+Package: solute-vegetable-insults-new
+Architecture: all
+Depends:
+    ${misc:Depends},
+    ${python:Depends},
+    solute-python-solute,
+    apache2,
+    libapache2-mod-wsgi,
+    python-solute-web,
+Description: <insert up to 60 chars description> <insert long description, indented with spaces>

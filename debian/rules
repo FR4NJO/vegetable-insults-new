@@ -1,0 +1,8 @@
+#!/usr/bin/make -f
+export DEBCLEAN_CLEANDEBS=yes
+export DH_ALWAYS_EXCLUDE=CVS:.svn:.git
+%:
+	dh $@
+override_dh_clean:
+	dh_clean
+	rm -rf $(CURDIR)/*.egg-info

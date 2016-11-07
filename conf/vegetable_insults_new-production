@@ -1,0 +1,16 @@
+Listen 443
+<VirtualHost *:443>
+    ServerName localhost
+
+    Include /etc/solute/apache2/global-acl.conf
+    Include /etc/solute/apache2/global-ssl.conf
+
+    ErrorLog /var/log/apache2/error.log
+    CustomLog /var/log/apache2/access.log combined
+
+    SSLCertificateFile /etc/solute/ssl/wildcard.maastricht.pem
+
+    WSGIDaemonProcess vegetable_insults_new processes=5 threads=10 display-name=vegetable_insults_new
+    WSGIPassAuthorization On
+    WSGIScriptAlias / /usr/share/solute/webapps/vegetable_insults_new-production.wsgi process-group=vegetable_insults_new application-group=%{GLOBAL}
+</VirtualHost>

@@ -1,0 +1,20 @@
+<div class="ui container">
+	<div class="ui segment">
+		{{#link-to "index" class="item"}}
+			<h2 class="ui header">
+				<img src="http://image.flaticon.com/icons/svg/135/135637.svg" width="224" height="224" alt="Salad free icon" title="Salad free icon">
+				<div class="content">
+					Vegetable Insult
+				</div>
+			</h2>
+		{{/link-to}}
+		<div class="ui menu">
+				{{#link-to "index" class="item"}}Home{{/link-to}} 
+        {{#link-to "solute" class="item"}}Vegetable Insult{{/link-to}}
+		</div>
+
+		<div class="ui segment">
+			{{outlet}}
+		</div>
+	</div>
+</div>
